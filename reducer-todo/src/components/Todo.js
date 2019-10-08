@@ -45,12 +45,14 @@ const Todo = () => {
 
          </form>
       {state.todos.map(items => (
-        
+         
         <div
           className={items.completed ?  "complete" : "todo"}
           onClick={() => dispatch({ type:"TOGGLE", payload: items.id })}
         >
-            <TodoList todos= {items}  /> 
+            
+        <TodoList todos= {items}  />
+          
          
         </div>
       ))}
